@@ -1,0 +1,4 @@
+Using WSL 
+installing ruby
+    using rvm
+https://gorails.com/setup/ubuntu/18.04
