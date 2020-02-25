@@ -1,0 +1,31 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Pointers</title>
+
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/prism.css" />
+
+</head>
+
+<body>
+
+    <h1>Pointers</h1>
+
+    <p>A <em>pointer</em> in c++ is a variable that stores the address of another variable.  An <em>address</em> is a number that represents a particular location in memory (RAM).</p>
+    <p>When a pointer variable is created, the type of the pointer indicates the type of data stored at the memory location pointed to by the pointer.  For example:</p>
+
+    <pre><code class="language-cpp">int* x;</code></pre>
+
+    <p>declares a variable that can hold a pointer to an integer.  Note that in this example, the value (address) of the pointer is not specified, which is generally a bad idea.  The best practice is to always
+        initialize variables as soon as you create them.</p>
+    <p>It is important to remember that the <em>value</em> of a pointer is an address.  The variable <em>x</em> declared above does <em>not</em> store an integer, it stores the address of an integer.</p>
+
+    <script src="/js/prism.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,48 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>References</title>
+
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/prism.css" />
+
+</head>
+
+<body>
+
+    <h1>References</h1>
+
+    <p>A <em>Reference</em> in c++ is a variable that refers to another variable.  A reference does not have its own value, 
+        but instead is simply an alias or another name for some other variable.  For example </p> 
+
+    <pre><code class="language-cpp">
+        int x{20}; // create a variable x and initialize its value to 20
+        int& r{x}; // create a variable r that is a reference to x
+    </code></pre>
+
+    <p>The code above creates a reference r that is an alias for x.  Using (reading or modifying) r is no different than using x.   
+       So, assigning a value to r will cause x to be changed, since both x and r refer to the same object (the same chunk of memory).
+    </p>
+
+    <p>Consider the following statements:</p>
+
+    <pre><code class="language-cpp">
+        int y{15};
+        r = y;   // this line of code sets x to 15. 
+    </code></pre>
+
+    <p>The code above does <em>not</em> make r a reference to y!  After you create a reference, you cannot change what variable it refers to.</p>
+
+    <footer>
+        Disclaimer: The discription/discussion on this page is intended for beginning programmers.  I am intentionally glossing over certain details in order to reinforce the basic concepts of this topic.
+        Rather than accepting the statements above as the literal truth, please understand that some of the statements are more along the lines of "a good way to think about it."
+    </footer>
+
+    <script src="/js/prism.js"></script>
+</body>
+</html>
+
+
