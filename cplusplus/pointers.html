@@ -6,7 +6,7 @@
 
   <title>Pointers</title>
 
-  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/prism.css" />
 
 </head>
@@ -21,8 +21,24 @@
     <pre><code class="language-cpp">int* x;</code></pre>
 
     <p>declares a variable that can hold a pointer to an integer.  Note that in this example, the value (address) of the pointer is not specified, which is generally a bad idea.  The best practice is to always
-        initialize variables as soon as you create them.</p>
-    <p>It is important to remember that the <em>value</em> of a pointer is an address.  The variable <em>x</em> declared above does <em>not</em> store an integer, it stores the address of an integer.</p>
+        initialize variables as soon as you create them.  Here's a somewhat longer example:</p>
+
+    <pre><code class="language-cpp">
+        int num{13};    // declare an integer variable named <em>num</em> and initialize it with the value 13
+        int* x{nullptr};  // declare a pointer to an integer.  Note: a pointer that isn't pointing at a particular address should be set to nullptr
+
+        x = &num;   // in this statement, & is the "address of" operator.  x now points at <em>num</em>.
+
+        cout << *x << endl; // prints 13   the * is the dereference operator
+
+        *x = 50;   // sets <em>num</em> to 50
+
+        cout << num << endl; // prints 50
+    </code></pre>
+
+
+    <p>It is important to remember that the <em>value</em> of a pointer is an address.  
+        The variable <em>x</em> declared above does <em>not</em> store an integer, it stores the <em>address</em> of an integer.</p>
 
     <script src="/js/prism.js"></script>
 </body>

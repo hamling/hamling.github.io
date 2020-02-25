@@ -6,7 +6,7 @@
 
   <title>References</title>
 
-  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/prism.css" />
 
 </head>
@@ -16,11 +16,13 @@
     <h1>References</h1>
 
     <p>A <em>Reference</em> in c++ is a variable that refers to another variable.  A reference does not have its own value, 
-        but instead is simply an alias or another name for some other variable.  For example </p> 
+        but instead is simply an alias or another name for some other variable.  For example:</p> 
 
     <pre><code class="language-cpp">
         int x{20}; // create a variable x and initialize its value to 20
         int& r{x}; // create a variable r that is a reference to x
+
+        r = 3;  // sets x to 3  
     </code></pre>
 
     <p>The code above creates a reference r that is an alias for x.  Using (reading or modifying) r is no different than using x.   
@@ -31,10 +33,11 @@
 
     <pre><code class="language-cpp">
         int y{15};
-        r = y;   // this line of code sets x to 15. 
+
+        r = y;   // sets x to 15 (the value of y). 
     </code></pre>
 
-    <p>The code above does <em>not</em> make r a reference to y!  After you create a reference, you cannot change what variable it refers to.</p>
+    <p>Note: The code above does <em>not</em> make r a reference to y!  After you create a reference, you cannot change what variable it refers to.</p>
 
     <footer>
         Disclaimer: The discription/discussion on this page is intended for beginning programmers.  I am intentionally glossing over certain details in order to reinforce the basic concepts of this topic.
