@@ -6,7 +6,7 @@ class Animal {
 public:
     virtual ~Animal();
     virtual string species() = 0;
-    virtual void makeNoise() = 0;
+    virtual string description() = 0;
 };
 
 Animal::~Animal()
@@ -14,55 +14,59 @@ Animal::~Animal()
 }
 
 class Cat : public Animal {
+private:
+    int lives;
 public:
+    Cat(int numLives);
     string species() override;
-    void makeNoise() override;
+    string description() override;
 };
 
-string Cat::species()
+Cat::Cat(int numLives) : lives{numLives}
 {
+}
+
+string Cat::species() {
     return "Cat";
 }
 
-void Cat::makeNoise()
-{
-    cout << "The " << species() << " goes meow" << endl;
+string Cat::description() {
+    return species() + " with " + to_string(lives) + " lives";
 }
 
 class Dog : public Animal {
+    bool floppy;
 public:
+    Dog(bool floppy);
     string species() override;
-    void makeNoise() override;
+    string description() override;
 };
 
-string Dog::species()
+Dog::Dog(bool floppy) : floppy{floppy}
 {
+}
+
+string Dog::species() {
     return "Dog";
 }
 
-void Dog::makeNoise()
-{
-    cout << "Bark Bark said the " << species() << endl;
+string Dog::description() {
+    return species() + " with " + (floppy ? "Droopy" : "Pointy") + " ears";
 }
 
-// Note:  this function takes a reference to a base class
-// you can pass in any class derived from animal, and it will
-// call the appropriate version of the makeNoise method
-// for that class
-void multipleNoises(Animal& animal, int numberOfNoises)
+
+void printDescription(Animal& animal)
 {
-    for (int i = 0; i < numberOfNoises; i++) {
-        animal.makeNoise();
-    }
+    cout << animal.description() << endl;
 }
 
 int main()
 {
-    Dog fido;
-    Cat felix;
+    Dog fido{false};
+    Cat felix{3};
 
-    multipleNoises(fido, 3);
-    multipleNoises(felix, 7);
+    printDescription(fido);
+    printDescription(felix);
 
     return 0;
 }
