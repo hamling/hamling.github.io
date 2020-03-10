@@ -42,11 +42,16 @@ main {
 }
 
 #board tbody {
-    display: content;
+    display: contents;
     background-color: gold;
 }
 
 #board tr {
-    display: content;
+    display: contents;
     background-color: pink;
+}
+
+#board td {
+    text-align: center;
+    border: 1px solid red;
 }
