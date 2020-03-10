@@ -1,0 +1,52 @@
+html {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr auto;
+    background-color: aqua;
+    height: 100vh;
+    margin: 0;
+}
+
+header {
+    grid-column: 1 / 3;
+    background-color: blueviolet;
+}
+
+main {
+    background-color: cadetblue;
+}
+
+#controls {
+    background-color: palegoldenrod;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 100%;
+    background-color: goldenrod;
+}
+
+#board tbody {
+    display: content;
+    background-color: gold;
+}
+
+#board tr {
+    display: content;
+    background-color: pink;
+}
