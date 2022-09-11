@@ -1,2 +1,2 @@
-![Alt text](./controllers_brief.svg)
-<img src="./controllers_brief.svg">
+![Alt text](./circuit.svg)
+<img src="./circuit.svg">
