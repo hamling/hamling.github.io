@@ -69,7 +69,6 @@ Examples:
 	                       // "empty vector"
 ```
 
-
 	
 ## Literal
 
